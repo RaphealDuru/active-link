@@ -1,4 +1,17 @@
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker,
+  Environment
+} from '@ionic-native/google-maps';
+
 import { Component } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-tab3',

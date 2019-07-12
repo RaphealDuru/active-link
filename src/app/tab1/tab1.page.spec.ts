@@ -12,7 +12,7 @@ describe('Tab1Page', () => {
       declarations: [Tab1Page],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
-  }));
+}));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(Tab1Page);
@@ -24,3 +24,4 @@ describe('Tab1Page', () => {
     expect(component).toBeTruthy();
   });
 });
+

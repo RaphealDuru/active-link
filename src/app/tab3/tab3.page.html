@@ -1,9 +1,138 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      LINK UP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+    <ion-list-header>SUGGESTIONS:</ion-list-header>
+
+    <ion-chip>
+        <ion-label>BASKETBALL SHOOTOUT</ion-label>
+      </ion-chip>
+      
+      <ion-chip>
+        <ion-label color="secondary">PICNIC</ion-label>
+      </ion-chip>
+      
+      <ion-chip color="secondary">
+        <ion-label color="dark">PARTY</ion-label>
+      </ion-chip>
+      
+      <ion-chip>
+        <ion-icon name="pin"></ion-icon>
+        <ion-label>SWIMMING</ion-label>
+      </ion-chip>
+      
+      <ion-chip>
+        <ion-icon name="heart" color="dark"></ion-icon>
+        <ion-label>READING</ion-label>
+      </ion-chip>
+      
+      <ion-chip>
+        <ion-label>GAMING</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+      
+      <ion-chip>
+        <ion-icon name="pin" color="primary"></ion-icon>
+        <ion-label>Icon Chip</ion-label>
+        <ion-icon name="close"></ion-icon>
+      </ion-chip>
+      
+      <ion-chip>
+        <ion-avatar>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>Avatar Chip</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+
+
+
+
+
+
+
+
+
+
+<div class="buttons">
+    <ion-list>
+        <ion-list-header>PLAN DESIRED LINK UP</ion-list-header>
+      
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select placeholder="Select One">
+            <ion-select-option value="f">Female</ion-select-option>
+            <ion-select-option value="m">Male</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>LOCATION</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="brown">SOUTH CENTRAL</ion-select-option>
+            <ion-select-option value="blonde">WEST LA</ion-select-option>
+            <ion-select-option value="black">HOLLYWOOD</ion-select-option>
+            <ion-select-option value="red">COMPTON</ion-select-option>
+          </ion-select>
+        </ion-item>
+     </ion-list><ion-list>
+        
+        <ion-item>
+          <ion-label>AGE</ion-label>
+          <ion-select placeholder="Select One">
+            <ion-select-option value="12">1-15</ion-select-option>
+            <ion-select-option value="18">15-18</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>INTERESTS</ion-label>
+          <ion-select value="SPORTS" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="brown">MUSIC</ion-select-option>
+            <ion-select-option value="blonde">VIDEO GAMES</ion-select-option>
+            <ion-select-option value="black">SPORTS</ion-select-option>
+            <ion-select-option value="red">READING</ion-select-option>
+          </ion-select>
+        </ion-item>
+</ion-list>
+
+<ion-list>
+  
+    <ion-item>
+      <ion-label>REQUIREMENTS</ion-label>
+      <ion-select multiple="true" cancelText="NO" okText="OK">
+        <ion-select-option value="bacon">FOOD</ion-select-option>
+        <ion-select-option value="olives">DRINKS</ion-select-option>
+        <ion-select-option value="xcheese">VENUE</ion-select-option>
+        <ion-select-option value="peppers">CHAIRS</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+    
+    <ion-list>
+      <ion-item>
+        <ion-label>NUMBER OF PEOPLE DESIRED</ion-label>
+        <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+          <ion-select-option value="red">1-20</ion-select-option>
+          <ion-select-option value="purple">20-40</ion-select-option>
+          <ion-select-option value="yellow">40-60</ion-select-option>
+          <ion-select-option value="orange">60-80</ion-select-option>
+          <ion-select-option value="green">80-100</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+    </ion-list>
+  </div>
+
+  
+
+</ion-content>
+  
