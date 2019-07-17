@@ -11,6 +11,9 @@ import {
 } from '@ionic-native/google-maps';
 import { Platform } from '@ionic/angular';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { ToastController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPage } from '../pages/modal/modal.page';
 
 
 
@@ -21,7 +24,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 })
 export class Tab1Page {
   map: GoogleMap;
-  constructor(private platform: Platform) {}
+  constructor(private platform: Platform, public toastController: ToastController, public modalController: ModalController) {}
 
   
 
@@ -30,6 +33,51 @@ export class Tab1Page {
     await this.loadMap();
     console.log('Map works bro!');
   }
+
+  async presentModal() {
+    console.log('works!');
+    const modal = await this.modalController.create({
+      component: ModalPage
+    });
+    return await modal.present();
+  }
+// async presentToast() {
+//     const toast = await this.toastController.create({
+//       message: 'Your settings have been saved.',
+//       duration: 1000
+//     });
+//     toast.present();
+//   }
+
+//   async presentToastWithOptions() {
+//     const toast = await this.toastController.create({
+//       header: 'this is a park!',
+//       message: 'Click to Close',
+//       position: 'bottom',
+//       cssClass: 'toast-css',
+//       buttons: [
+//         {
+//           side: 'start',
+//           icon: 'football',
+//           text: 'Address:6x6x6 usc high ways,90054,los angeles',
+          
+//           handler: () => {
+//             console.log('Favorite clicked');
+//           }
+//         }, {
+//           text: 'Done',
+//           role: 'cancel',
+//           handler: () => {
+//             console.log('Cancel clicked');
+//           }
+//         }
+//       ]
+//     });
+//     toast.present();
+//   }
+
+
+
     loadMap() {
 
       // This code is necessary for browser
@@ -41,10 +89,10 @@ export class Tab1Page {
       let mapOptions: GoogleMapOptions = {
         camera: {
            target: {
-             lat: 34.021489, 
-             lng: -118.287571
+             lat:33.9617 , 
+             lng: -118.3531
            },
-           zoom: 0.5,
+           zoom: 10.5,
            tilt: 30
          }
       };
@@ -53,7 +101,7 @@ export class Tab1Page {
 
 let marker : Marker = this.map.addMarkerSync({
  title: 'State Park',
- icon: 'red',
+ icon: '#0F9D37',
  animation: 'DROP',
  position: {
      lat: 34.021489 ,
@@ -65,11 +113,90 @@ let marker : Marker = this.map.addMarkerSync({
 
 });
 
+let marker_two : Marker = this.map.addMarkerSync({
+  title: 'STAPLES',
+  icon: '#0F9D37',
+  animation: 'DROP',
+  position: {
+      lat: 34.03916651 ,
+      lng: -118.266998932
+      
+  }
+ 
+ 
+ 
+ });
+ let marker_three : Marker = this.map.addMarkerSync({
+  title: ' LOS ANGELES ',
+  icon: '#0F9D37',
+  animation: 'bounce',
+  position: {
+      lat: 34.0522 ,
+      lng: -118.2437
+      
+  }
+ 
+ 
+ 
+ });
+
+ let marker_four : Marker = this.map.addMarkerSync({
+  title: ' VENICE',
+  icon: '#0F9D37',
+  animation: 'drop',
+  position: {
+      lat: 33.9850 ,
+      lng: -118.4695 
+      
+  }
+ 
+ 
+ 
+ });
+
+
+ let marker_five : Marker = this.map.addMarkerSync({
+  title: 'INGLEWOOD',
+  icon: '#0F9D37',
+  animation: 'bounce',
+  position: {
+      lat: 33.9617,
+      lng: -118.3531
+      
+  }
+ 
+ 
+ 
+ });
+
+ let marker_six: Marker = this.map.addMarkerSync({
+  title: 'BEVERLY HILLS',
+  icon: '#0F9D37',
+  animation: 'drop',
+  position: {
+      lat: 34.0736,
+      lng: -118.4004 
+      
+  }
+ 
+ 
+ 
+ });
 
 
 marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
- alert('This is an active links marker');
+ this.presentModal();
 });
+
+// marker_two.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+//   this.presentToastWithOptions();
+//  });
+
+//  marker_three.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+//   this.presentToastWithOptions();
+//  });
+
+
 
   
   }

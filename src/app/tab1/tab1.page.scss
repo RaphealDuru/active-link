@@ -7,8 +7,8 @@ ion-toolbar{
 
 }
 .search {
-  position: fixed;
-  top: 55px;
+  position: relative;
+  top: 45px;
   left: 0px;
   width: 100%;
   height: 20px;
@@ -32,3 +32,11 @@ ion-toolbar{
 .map{
   height: 100%;
 }
+
+.Suggest{
+font:caps;
+  padding: -25px;
+  font-size: 2px;
+
+}
+
