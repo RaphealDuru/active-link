@@ -16,24 +16,35 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8wilaTznFX29Fv93qtLMQA_QT9CRevD4&callback=initMap">
     </script>
-    
-    <div class="Suggest">
-  
-    <ion-item >
-    <h1>state park</h1>
+<ion-item>
+     <ion-label>SUGGESTIONS</ion-label>
   </ion-item>
 
+    <div class="Suggest">
+  
+      <ion-item (click)="presentModal()" routerLink="/modal">
+          <ion-icon name="leaf" size="large" slot="end" color="success"></ion-icon>
+        <h1>
+          State Park
+        </h1>
+      </ion-item>
+   
+
   <ion-item >
+      <ion-icon name="information-circle" size="large" slot="end" color="secondary"></ion-icon>
     <h1>Capital Field</h1>
   </ion-item>
 
 <ion-item >
+    <ion-icon name="paw" size="large" slot="end" color="success"></ion-icon>
     <h1>Edwards park</h1>
   </ion-item>
 
 <ion-item >
+    <ion-icon name="walk" size="large" slot="end" color="success"></ion-icon>
     <h1>Ortega Park</h1>
   </ion-item>
+
 </div>
 
 

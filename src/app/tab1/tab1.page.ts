@@ -13,14 +13,15 @@ import { Platform } from '@ionic/angular';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { ToastController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../pages/modal/modal.page';
-
+import { ModalPage } from '../modal/modal.page';
 
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
+  
+
 })
 export class Tab1Page {
   map: GoogleMap;
@@ -35,12 +36,12 @@ export class Tab1Page {
   }
 
   async presentModal() {
-    console.log('works!');
     const modal = await this.modalController.create({
       component: ModalPage
     });
     return await modal.present();
   }
+
 // async presentToast() {
 //     const toast = await this.toastController.create({
 //       message: 'Your settings have been saved.',
@@ -185,8 +186,8 @@ let marker_two : Marker = this.map.addMarkerSync({
 
 
 marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
- this.presentModal();
-});
+this.presentModal();
+ });
 
 // marker_two.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
 //   this.presentToastWithOptions();
