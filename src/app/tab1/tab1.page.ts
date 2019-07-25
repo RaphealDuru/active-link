@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPage } from '../modal/modal.page';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+// import { Geolocation } from '@ionic-native/geolocation';
 import {
   GoogleMaps,
   GoogleMap,
@@ -9,12 +15,6 @@ import {
   Marker,
   Environment,
 } from '@ionic-native/google-maps';
-import { Platform } from '@ionic/angular';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { ToastController } from '@ionic/angular';
-import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../modal/modal.page';
-
 
 @Component({
   selector: 'app-tab1',
@@ -25,9 +25,8 @@ import { ModalPage } from '../modal/modal.page';
 })
 export class Tab1Page {
   map: GoogleMap;
-  constructor(private platform: Platform, public toastController: ToastController, public modalController: ModalController) {}
+  constructor(private platform: Platform, public toastController: ToastController, public modalController: ModalController,private splashScreen: SplashScreen) {}
 
-  
 
   async ngOnInit() {
     await this.platform.ready();
@@ -35,11 +34,32 @@ export class Tab1Page {
     console.log('Map works bro!');
   }
 
+  // locate(){
+
+  
+  // this.geolocation.getCurrentPosition().then((resp) => {
+  //   console.log(resp.coords.latitude);
+  //   // resp.coords.longitude
+  //  }).catch((error) => {
+  //    console.log('Error getting location', error);
+  //  });
+   
+  //  let watch = this.geolocation.watchPosition();
+  //  watch.subscribe((data) => {
+  //   // data can be a set of coordinates, or an error (if an error occurred).
+  //   // data.coords.latitude
+  //   // data.coords.longitude
+  //  });
+
+  // }
+
   async presentModal() {
     const modal = await this.modalController.create({
       component: ModalPage
     });
     return await modal.present();
+
+    
   }
 
 // async presentToast() {

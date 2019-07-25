@@ -7,19 +7,12 @@
 </ion-header>
 
 <ion-content>
+<div>
+<ion-list>
 
-
-
-
-
-
-
-
-
-<div class="buttons">
-    <ion-list>
-
-<header> <ion-list-header>CREATE YOUR TEAM</ion-list-header></header>
+<header> <ion-list-header>CREATE YOUR TEAM <p class=""></p>
+</ion-list-header>
+      </header>
   
         <ion-item>
           <ion-label>Time To Meet</ion-label>
@@ -32,68 +25,31 @@
         <ion-item>
           <ion-label>LOCATION</ion-label>
           <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="brown">SOUTH CENTRAL</ion-select-option>
-            <ion-select-option value="blonde">WEST LA</ion-select-option>
-            <ion-select-option value="black">HOLLYWOOD</ion-select-option>
-            <ion-select-option value="red">COMPTON</ion-select-option>
+            <ion-select-option value="brown">State Park</ion-select-option>
+            <ion-select-option value="blonde">Capital Field</ion-select-option>
+            <ion-select-option value="black">Edwards park</ion-select-option>
+            <ion-select-option value="red">Ortega Park</ion-select-option>
           </ion-select>
         </ion-item>
-     </ion-list><ion-list>
-        
+     
+      
   
       
-        <ion-item>
-          <ion-label>AGE</ion-label>
-          <ion-select placeholder="Select One">
-            <ion-select-option value="12">1-15</ion-select-option>
-            <ion-select-option value="18">15-18</ion-select-option>
-          </ion-select>
-        </ion-item>
       
-        <ion-item>
-          <ion-label>INTERESTS</ion-label>
-          <ion-select value="SPORTS" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="brown">MUSIC</ion-select-option>
-            <ion-select-option value="blonde">VIDEO GAMES</ion-select-option>
-            <ion-select-option value="black">SPORTS</ion-select-option>
-            <ion-select-option value="red">READING</ion-select-option>
-          </ion-select>
-        </ion-item>
+       
 </ion-list>
 
-<ion-list>
+
+
+    
   
-    <ion-item>
-      <ion-label>REQUIREMENTS</ion-label>
-      <ion-select multiple="true" cancelText="NO" okText="OK">
-        <ion-select-option value="bacon">FOOD</ion-select-option>
-        <ion-select-option value="olives">DRINKS</ion-select-option>
-        <ion-select-option value="xcheese">VENUE</ion-select-option>
-        <ion-select-option value="peppers">CHAIRS</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-
-
-    
-    <ion-list>
-      <ion-item>
-        <ion-label>NUMBER OF PEOPLE DESIRED</ion-label>
-        <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
-          <ion-select-option value="red">1-20</ion-select-option>
-          <ion-select-option value="purple">20-40</ion-select-option>
-          <ion-select-option value="yellow">40-60</ion-select-option>
-          <ion-select-option value="orange">60-80</ion-select-option>
-          <ion-select-option value="green">80-100</ion-select-option>
-        </ion-select>
-      </ion-item>
-    
-    </ion-list>
   </div>
 
   <ion-button color="danger" expand="block"class="location">ping my location</ion-button>
   
   
   <ion-progress-bar type="indeterminate" reversed="false"  color="dark"></ion-progress-bar>
-</ion-content>
+  
+
+    </ion-content>
   
