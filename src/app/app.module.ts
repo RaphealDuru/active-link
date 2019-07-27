@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleMaps} from '@ionic-native/google-maps'
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent,],
@@ -18,7 +19,7 @@ import { GoogleMaps} from '@ionic-native/google-maps'
     StatusBar,
     SplashScreen,
     GoogleMaps,
-  
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   

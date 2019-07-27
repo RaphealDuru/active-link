@@ -2,17 +2,18 @@
   <!-- <div id="map"></div> -->
 
   <ion-content>
-    <ion-searchbar class="search" animated></ion-searchbar>
+    <ion-searchbar color="#FFFFFF" class="search" animated></ion-searchbar>
  
 
     <div id="map_canvas" style="width: 100%; height: 60%;"></div>
     <div #map id="map"></div>  
+  
      <ion-label>SUGGESTIONS</ion-label>
  
 
     <div class="Suggest">
   
-      <ion-item (click)="presentModal()" routerLink="/modal">
+      <ion-item routerLink="/park1">
           <ion-icon name="leaf" size="large" slot="end" color="success"></ion-icon>
         <h1>
           State Park

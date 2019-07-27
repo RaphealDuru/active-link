@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SharedModule } from '../tab3/shared.module';
-
-import { ModalPage } from './modal.page';
+import { Park1Page } from './park1.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ModalPage
+    component: Park1Page
   }
 ];
 
@@ -21,8 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    RouterModule.forChild(routes)
   ],
-  declarations: [ModalPage],
-  exports: [ModalPage]
+  declarations: [Park1Page]
 })
-export class ModalPageModule {}
+export class Park1PageModule {}

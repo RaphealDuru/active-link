@@ -1,8 +1,9 @@
-<html class="ios">
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
     <ion-title>
-      <p class="exit" (click)="dismiss()">Exit</p>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -56,15 +57,7 @@
     </ion-item>
     
     <div class="butt">
-   <ion-label>
-    <ion-button expand="full" size="default">Matches</ion-button>
-  </ion-label>
+    <ion-button routerLink="/matches"  expand="full" size="default">Matches</ion-button>
   </div>
- <ion-label>
-    <ion-button  color="dark" size="round" expand="block" class="location" >CREATE A LINK </ion-button>
-</ion-label>
-
-
+    <ion-button routerLink="/link" color="dark" size="round" expand="block" class="location" >CREATE A LINK </ion-button>
 </ion-content>
-
-</html>
