@@ -1,44 +1,84 @@
+<!-- <div id="map"></div> -->
 
-  <!-- <div id="map"></div> -->
-
-  <ion-content>
-    <ion-searchbar color="#FFFFFF" class="search" animated></ion-searchbar>
+<ion-content>
+  
+  <ion-searchbar color="#FFFFFF" class="search" animated></ion-searchbar>
+ 
  
 
-    <div id="map_canvas" style="width: 100%; height: 60%;"></div>
-    <div #map id="map"></div>  
-  
-     <ion-label>SUGGESTIONS</ion-label>
- 
 
-    <div class="Suggest">
-  
-      <ion-item routerLink="/park1">
-          <ion-icon name="leaf" size="large" slot="end" color="success"></ion-icon>
-        <h1>
-          State Park
-        </h1>
-      </ion-item>
+  <div id="map_canvas" style="width: 100%; height: 60%;"></div>
+  <div #map id="map"></div>
+
+
+
+  <div class="Suggest">
+
+
    
 
-  <ion-item >
-      <ion-icon name="information-circle" size="large" slot="end" color="secondary"></ion-icon>
-    <h1>Capital Field</h1>
-  </ion-item>
-
-<ion-item >
-    <ion-icon name="paw" size="large" slot="end" color="success"></ion-icon>
-    <h1>Edwards park</h1>
-  </ion-item>
-
-<ion-item >
-    <ion-icon name="walk" size="large" slot="end" color="success"></ion-icon>
-    <h1>Ortega Park</h1>
-  </ion-item>
-
-</div>
+    <ion-item class="item" routerLink="/park1">
+      <ion-label>
+        <h1>
+          Westpark Valley Village
+        </h1>
+        <p>5000 Westpark Dr North Hollywood, CA 91601</p>
+      </ion-label>
+      <ion-icon item-right name="leaf" size="large" slot="start" color="success" id="leadIcon"></ion-icon>
+    </ion-item>
 
 
-</ion-content>
+    <ion-item>
+      <ion-label>
+        <h1>
+          Playa Vista
+        </h1>
+        <p>5556 S Centinela Ave Los Angeles,CA 90066</p>
+      </ion-label>
+      <ion-icon item-right name="information-circle" size="large" slot="start" color="secondary"></ion-icon>
 
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h1>
+          East Hollywood
+        </h1>
+        <p>307 N Hoover St, Los Angeles CA 90004</p>
+      </ion-label>
+      <ion-icon name="paw" size="large" slot="start" color="success"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+          Griffith Park
+        </h1>
+        <p>3401 Riverside Dr Los Angeles, CA 90027</p>
+      </ion-label>
+      <ion-icon name="walk" size="large" slot="start" color="success"></ion-icon>       
+     </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+        Atwater Park
+        </h1>
+        <p>3900 W Chevy Chase Dr Los Angeles, CA 90039</p>
+      </ion-label>
+      <ion-icon name="walk" size="large" slot="start" color="success"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>
+          <h1>
+            Glassell Park
+          </h1>
+          <p>1900 N San Fernando Rd Los Angeles, CA 90065</p>
+        </ion-label>
+        <ion-icon name="walk" size="large" slot="start" color="success"></ion-icon>
+      </ion-item>
+      
   
+   
+
+   </div>
+</ion-content>

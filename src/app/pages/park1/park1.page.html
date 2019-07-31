@@ -1,63 +1,57 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
     <ion-title>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div>
+    <ion-card class="item">
+      <ion-item>
+        <ion-label>
+          <h1>Westpark Valley Village</h1>
+          <p>Park Open to public</p>
+        </ion-label>
+      </ion-item>
 
+      <ion-label>
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide>
+            <h1>
+              <p><img src="assets/soccer_field-2.jpg"></p>
+            </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1><img src="assets/field2.jpeg"></h1>
+          </ion-slide>
+          <ion-slide>
+            <h1> <img src="assets/Tom_Thompson_Field_71.jpg"> </h1>
+          </ion-slide>
+        </ion-slides>
+      </ion-label>
+      <div class="text">
+        <h1 id="address">Address</h1>
+        <p>100 N Toluca St, Los Angeles,CA 90026 United States</p>
 
-  <ion-item>
-    <ion-label>
-      <h1>Capital Field</h1>
-      <p>High school field open to public</p>
-    </ion-label>
-  </ion-item>
+        <h1 id="address">Hours</h1>
+        <p>Mon/Fri 11 AM to 7 PM
+          <br>
+          Sat/Sun 8 AM to 7 PM
+        </p>
+        <h1 id="address">Description</h1>
+          <p> This place contains around 40 parking lots, contains more than 4 fields to play with a group of 6 or 8 per
+            team, it is only closed on holidays.</p>
+      </div>
+    </ion-card>
 
-  <ion-label>
-    <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide>
-        <h1>
-          <p><img src="assets/soccer_field-2.jpg"></p>
-        </h1>
-      </ion-slide>
-      <ion-slide>
-        <h1><img src="assets/field2.jpeg"></h1>
-      </ion-slide>
-      <ion-slide>
-        <h1> <img src="assets/Tom_Thompson_Field_71.jpg"> </h1>
-      </ion-slide>
-    </ion-slides>
-  </ion-label>
-  <ion-item>
-    <ion-label>
-      <h1>Address</h1>
-      <p>100 N Toluca St,Los</p>
-      <p>Angeles,CA 90026</p>
-      <p>United States</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>
-      <h1>Description</h1>
-      <p>
-        <p>s simply dummy text of the printing and</p>
-        <p> typesetting industry. Lorem Ipsum has</p>
-        <p>been the industry's standard dummy text</p>
-        <p>ever since the 1500s, when an unknown </p>
-        <p>printer took a galley of type and scrambled</p>
-        <p>it to make a type specimen book.</p>
-
-
-    </ion-label>
-    </ion-item>
-    
     <div class="butt">
-    <ion-button routerLink="/matches"  expand="full" size="default">Matches</ion-button>
+      <ion-button routerLink="/matches" expand="full" size="default">Matches</ion-button>
+    </div>
+    <ion-button routerLink="/link" color="dark" size="round" expand="block" class="location">CREATE A LINK </ion-button>
   </div>
-    <ion-button routerLink="/link" color="dark" size="round" expand="block" class="location" >CREATE A LINK </ion-button>
+
 </ion-content>

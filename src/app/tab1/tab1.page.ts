@@ -107,9 +107,9 @@ export class Tab1Page {
 
     // console.log ('hello norld');
 
-    // navigator.geolocation.getCurrentPosition(function(position) {
-    //   do_something(position.coords.latitude, position.coords.longitude);
-    // });
+    navigator.geolocation.getCurrentPosition(function(position) {
+      (position.coords.latitude, position.coords.longitude);
+    });
 
 
     this.geolocation.getCurrentPosition().then((position) => {
@@ -212,8 +212,10 @@ export class Tab1Page {
 
 
 
-
   }
+
+
+
 
 }
 
